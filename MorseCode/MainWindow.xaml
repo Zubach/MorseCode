@@ -3,10 +3,36 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:MorseCode"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="300">
     <Grid>
-        
+        <materialDesign:ColorZone
+  Mode="PrimaryMid">
+            <StackPanel
+    Orientation="Horizontal"
+    Margin="2">
+                <RadioButton
+      Style="{StaticResource MaterialDesignTabRadioButton}"
+      Margin="4"
+      IsChecked="True"
+                    Checked="RadioButton_Checked"
+      Content="Alphabet" />
+                <RadioButton
+      Style="{StaticResource MaterialDesignTabRadioButton}"
+      Margin="4"
+                    Checked="RadioButton_Checked"
+      IsChecked="False"
+      Content="Test" />
+                <RadioButton
+      Style="{StaticResource MaterialDesignTabRadioButton}"
+      Margin="4"
+      IsChecked="False"
+                    Checked="RadioButton_Checked"
+      Content="Translater" />
+            </StackPanel>
+        </materialDesign:ColorZone>
+        <Frame Margin="0,45,0,0" Name="frame" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
